@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Galeria de Imagens - Cultura Afro-Brasileira</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#f4d125",
+                    "background-light": "#f8f8f5",
+                    "background-dark": "#221f10",
+                },
+                fontFamily: {
+                    "display": ["Lexend", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+        },
+    }
+</script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Estilos para prevenir que a logo fique achatada */
+    .logo-container img {
+        object-fit: contain !important;
+        height: auto !important;
+        max-height: 64px;
+        width: auto !important;
+    }
+    .logo-footer img {
+        max-height: 48px;
+    }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#181711] dark:text-background-light">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-8 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-[1280px] flex-1">
+
+<!-- Cabeçalho Padrão COM LOGO CORRIGIDA (IGUAL AOS OUTROS) -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e6e4db] dark:border-[#3a351d] px-4 md:px-10 py-3">
+<div class="flex items-center gap-4 text-[#181711] dark:text-background-light">
+<!-- LOGO NO CABEÇALHO - NÃO ACHATADA -->
+<a href="index.html" class="logo-container flex items-center hover:opacity-90 transition-opacity">
+    <img src="logo.png"
+         alt="Logo Cultura Afro-Brasileira"
+         class="h-16 w-auto max-h-16"
+         style="object-fit: contain; height: auto;">
+</a>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-sm font-medium leading-normal text-[#181711] dark:text-background-light hover:text-primary dark:hover:text-primary" href="index.html">Início</a>
+<a class="text-sm font-medium leading-normal text-[#181711] dark:text-background-light hover:text-primary dark:hover:text-primary" href="sobre_a_cultura.html">Sobre a Cultura</a>
+<a class="text-sm font-medium leading-normal text-[#181711] dark:text-background-light hover:text-primary dark:hover:text-primary" href="desenvolvimento_do_projeto_&_linha_do_tempo.html">Desenvolvimento</a>
+<a class="text-sm font-medium leading-normal text-[#181711] dark:text-background-light hover:text-primary dark:hover:text-primary" href="aprendizados.html">Aprendizados</a>
+<a class="text-sm font-medium leading-normal text-[#181711] dark:text-background-light hover:text-primary dark:hover:text-primary" href="jogo_em_scratch.html">Jogo</a>
+<a class="text-sm font-medium leading-normal text-[#181711] dark:text-background-light hover:text-primary dark:hover:text-primary" href="contato.html">Contato</a>
+<a class="text-sm font-medium leading-normal text-[#181711] dark:text-background-light hover:text-primary dark:hover:text-primary" href="créditos.html">Créditos</a>
+<a class="text-sm font-bold leading-normal text-primary" href="galeria.html">Galeria</a>
+</div>
+</div>
+<button class="md:hidden p-2 rounded-lg hover:bg-black/10 dark:hover:bg-white/10">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+
+<main class="flex flex-col gap-8 py-10">
+<div class="flex flex-wrap justify-between gap-3 px-4">
+<div class="flex flex-col gap-3 max-w-3xl">
+<h1 class="text-4xl sm:text-5xl font-black leading-tight tracking-[-0.033em]">Galeria de Imagens</h1>
+<p class="text-base font-normal leading-normal text-[#8a8360] dark:text-gray-400">
+Explore os momentos e registros do desenvolvimento do nosso projeto sobre a Cultura Afro-Brasileira.
+</p>
+</div>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/scra.jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/site.jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-11-14 at 14.37.25 (1).jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-05 at 15.14.41.jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-05 at 15.14.42 (1).jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-05 at 15.14.42 (2).jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-05 at 15.14.42 (3).jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-05 at 15.14.42 (4).jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-05 at 15.14.42 (5).jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-05 at 15.14.42.jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-05 at 15.14.43 (1).jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-05 at 15.14.43 (2).jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-05 at 15.14.43 (3).jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-05 at 15.14.43 (4).jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-05 at 15.14.43 (5).jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-05 at 15.14.43.jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-05 at 15.14.44 (1).jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-05 at 15.14.44.jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-11 at 18.42.39.jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-11 at 18.42.40 (1).jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-11 at 18.42.40.jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-11 at 18.42.41 (1).jpeg"/>
+</div>
+</div>
+
+<div class="group relative flex flex-col">
+<div class="overflow-hidden rounded-xl aspect-[4/3] bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<img alt="Imagem da galeria" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" onclick="openModal(this.src)" src="imagens/WhatsApp Image 2025-12-11 at 18.42.41.jpeg"/>
+</div>
+</div>
+</div>
+</main>
+
+<!-- Rodapé Padrão COM LOGO CORRIGIDA -->
+<footer class="mt-16 border-t border-solid border-[#e6e4db] dark:border-[#3a351d] py-8 px-4 text-center">
+<div class="flex flex-col items-center justify-center">
+<div class="flex items-center gap-3 text-[#181711] dark:text-background-light mb-6">
+<!-- LOGO NO RODAPÉ - NÃO ACHATADA -->
+<a href="inicio.html" class="logo-footer flex items-center hover:opacity-90 transition-opacity">
+    <img src="logo.png" 
+         alt="Logo Cultura Afro-Brasileira" 
+         class="h-12 w-auto max-h-12" 
+         style="object-fit: contain; height: auto;">
+    <p class="text-base font-bold ml-3">Cultura Afro-Brasileira</p>
+</a>
+</div>
+<div class="flex flex-wrap justify-center gap-6 mt-4">
+<a class="text-[#8a8360] dark:text-gray-400 text-sm font-normal leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="index.html">Início</a>
+<a class="text-[#8a8360] dark:text-gray-400 text-sm font-normal leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="sobre_a_cultura.html">Sobre a Cultura</a>
+<a class="text-[#8a8360] dark:text-gray-400 text-sm font-normal leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="desenvolvimento_do_projeto_&_linha_do_tempo.html">Desenvolvimento</a>
+<a class="text-[#8a8360] dark:text-gray-400 text-sm font-normal leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="aprendizados.html">Aprendizados</a>
+<a class="text-[#8a8360] dark:text-gray-400 text-sm font-normal leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="jogo_em_scratch.html">Jogo</a>
+<a class="text-[#8a8360] dark:text-gray-400 text-sm font-normal leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="contato.html">Contato</a>
+<a class="text-[#8a8360] dark:text-gray-400 text-sm font-normal leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="créditos.html">Créditos</a>
+<a class="text-[#8a8360] dark:text-gray-400 text-sm font-normal leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="termos_e_privacidade.html">Termos</a>
+</div>
+<div class="flex flex-wrap justify-center gap-4 mt-4">
+<a href="#" class="text-[#8a8360] dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+<svg fill="currentColor" height="20" viewbox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M128 80a48 48 0 1 0 48 48 48.05 48.05 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32 32 32 0 0 1-32 32Zm48-136H80a56.06 56.06 0 0 0-56 56v96a56.06 56.06 0 0 0 56 56h96a56.06 56.06 0 0 0 56-56V80a56.06 56.06 0 0 0-56-56Zm40 152a40 40 0 0 1-40 40H80a40 40 0 0 1-40-40V80a40 40 0 0 1 40-40h96a40 40 0 0 1 40 40ZM192 76a12 12 0 1 1-12-12 12 12 0 0 1 12 12Z"></path>
+</svg>
+</a>
+<a href="#" class="text-[#8a8360] dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+<svg fill="currentColor" height="20" viewbox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M234.66 128a106.66 106.66 0 1 0-114.33 106.13V163H96v-35h24.33v-26.2c0-23.83 14.21-37.05 36.17-37.05a193.38 193.38 0 0 1 21.5.86V98h-12.27c-11.8 0-14.07 5.56-14.07 13.8v18.06h26.44l-3.44 35H148v71.13A106.68 106.68 0 0 0 234.66 128Z"></path>
+</svg>
+</a>
+<a href="#" class="text-[#8a8360] dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+<svg fill="currentColor" height="20" viewbox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="m234.33 73.13.06-.26a22.51 22.51 0 0 0-1.89-8.49 22.18 22.18 0 0 0-13.6-11.81C201.37 48 128 48 128 48s-73.37 0-90.87 4.57A22.18 22.18 0 0 0 23.53 64.38a22.51 22.51 0 0 0-1.89 8.49l-.06.26A280.49 280.49 0 0 0 21.33 104v48a280.49 280.49 0 0 0 .25 30.61l.06.26a22.51 22.51 0 0 0 1.89 8.49A22.18 22.18 0 0 0 37.13 203.17C54.63 207.74 128 207.74 128 207.74s73.37 0 90.87-4.57a22.18 22.18 0 0 0 13.6-11.81 22.51 22.51 0 0 0 1.89-8.49l.06-.26A280.49 280.49 0 0 0 234.67 152v-48a280.49 280.49 0 0 0-.34-30.87ZM101.33 155V96.59l45.45 29.21Z"></path>
+</svg>
+</a>
+</div>
+<p class="mt-4 text-sm text-[#8a8360] dark:text-gray-400">© 2025 Projeto Cultura Afro-Brasileira. Todos os direitos reservados.</p>
+</div>
+</footer>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- Modal for image zoom -->
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+<div class="relative max-w-4xl max-h-full p-4 flex items-center">
+<button onclick="prevImage()" class="absolute left-2 text-white text-4xl font-bold hover:text-gray-300 z-10"><</button>
+<img id="modalImage" class="max-w-full max-h-full object-contain" src="" alt="Imagem ampliada">
+<button onclick="nextImage()" class="absolute right-2 text-white text-4xl font-bold hover:text-gray-300 z-10">></button>
+<button onclick="closeModal()" class="absolute top-2 right-2 text-white text-2xl font-bold hover:text-gray-300">&times;</button>
+</div>
+</div>
+
+<script>
+let currentImageIndex = 0;
+let images = [];
+
+function collectImages() {
+    images = [];
+    const imgElements = document.querySelectorAll('.grid img');
+    imgElements.forEach(img => {
+        images.push(img.src);
+    });
+}
+
+function openModal(src) {
+    collectImages();
+    currentImageIndex = images.indexOf(src);
+    document.getElementById('modalImage').src = src;
+    document.getElementById('imageModal').classList.remove('hidden');
+}
+
+function closeModal() {
+    document.getElementById('imageModal').classList.add('hidden');
+}
+
+function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    document.getElementById('modalImage').src = images[currentImageIndex];
+}
+
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    document.getElementById('modalImage').src = images[currentImageIndex];
+}
+
+// Close modal when clicking outside the image
+document.getElementById('imageModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeModal();
+    }
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+    if (document.getElementById('imageModal').classList.contains('hidden')) return;
+    if (e.key === 'ArrowLeft') {
+        prevImage();
+    } else if (e.key === 'ArrowRight') {
+        nextImage();
+    } else if (e.key === 'Escape') {
+        closeModal();
+    }
+});
+</script>
+</body>
+</html>

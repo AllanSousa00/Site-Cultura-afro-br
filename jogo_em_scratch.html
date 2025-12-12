@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jogo em Scratch</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#f4d125",
+                    "background-light": "#f8f8f5",
+                    "background-dark": "#221f10",
+                },
+                fontFamily: {
+                    "display": ["Lexend", "sans-serif"]
+                },
+                borderRadius: {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+                },
+            },
+        },
+    }
+</script>
+<style>
+    /* Estilos para prevenir que a logo fique achatada */
+    .logo-container img {
+        object-fit: contain !important;
+        height: auto !important;
+        max-height: 64px;
+        width: auto !important;
+    }
+    .logo-footer img {
+        max-height: 48px;
+    }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#181711] dark:text-background-light">
+<div class="relative flex min-h-screen w-full flex-col">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+
+<!-- Cabeçalho Padrão COM LOGO CORRIGIDA -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e6e4db] dark:border-[#3a351d] px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4">
+<!-- LOGO NO CABEÇALHO - NÃO ACHATADA -->
+<a href="index.html" class="logo-container flex items-center hover:opacity-90 transition-opacity">
+    <img src="logo.png"
+         alt="Logo Cultura Afro-Brasileira"
+         class="h-16 w-auto max-h-16"
+         style="object-fit: contain; height: auto;">
+</a>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-sm font-medium leading-normal text-[#181711] dark:text-background-light hover:text-primary dark:hover:text-primary" href="index.html">Início</a>
+<a class="text-sm font-medium leading-normal text-[#181711] dark:text-background-light hover:text-primary dark:hover:text-primary" href="sobre_a_cultura.html">Sobre a Cultura</a>
+<a class="text-sm font-medium leading-normal text-[#181711] dark:text-background-light hover:text-primary dark:hover:text-primary" href="desenvolvimento_do_projeto_&_linha_do_tempo.html">Desenvolvimento</a>
+<a class="text-sm font-medium leading-normal text-[#181711] dark:text-background-light hover:text-primary dark:hover:text-primary" href="aprendizados.html">Aprendizados</a>
+<a class="text-sm font-bold leading-normal text-primary" href="jogo_em_scratch.html">Jogo</a>
+<a class="text-sm font-medium leading-normal text-[#181711] dark:text-background-light hover:text-primary dark:hover:text-primary" href="contato.html">Contato</a>
+<a class="text-sm font-medium leading-normal text-[#181711] dark:text-background-light hover:text-primary dark:hover:text-primary" href="créditos.html">Créditos</a>
+<a class="text-sm font-medium leading-normal text-[#181711] dark:text-background-light hover:text-primary dark:hover:text-primary" href="galeria.html">Galeria</a>
+</div>
+</div>
+<button class="md:hidden p-2 rounded-lg hover:bg-black/10 dark:hover:bg-white/10">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+
+<main class="flex-1 p-4 sm:p-6 md:p-8 space-y-8">
+<div class="flex flex-wrap justify-between gap-4">
+<div class="flex flex-col gap-3">
+<h1 class="text-4xl font-black tracking-[-0.033em]">Jogo em Scratch</h1>
+<p class="text-base font-normal text-[#8a8360] dark:text-gray-400">Um jogo educativo para aprender sobre a rica Cultura Afro-Brasileira de forma interativa.</p>
+</div>
+</div>
+
+<div class="flex flex-col">
+<div class="flex justify-center rounded-xl border border-[#e6e4db] dark:border-[#3a351d] bg-white dark:bg-[#2c2813] p-4">
+<iframe src="https://scratch.mit.edu/projects/1254188718/embed" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen class="max-w-full"></iframe>
+</div>
+</div>
+
+<h2 class="text-[22px] font-bold tracking-[-0.015em] pt-5 pb-3">Sobre o Jogo</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2 p-6 rounded-xl bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">sports_esports</span>
+<h3 class="text-lg font-bold tracking-[-0.015em]">Objetivo</h3>
+</div>
+<p class="text-sm font-normal text-[#8a8360] dark:text-gray-400">
+Explore os cenários e interaja com os elementos para descobrir fatos interessantes sobre a cultura afro-brasileira e completar as missões propostas em cada fase.
+</p>
+</div>
+<div class="flex flex-col gap-2 p-6 rounded-xl bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">school</span>
+<h3 class="text-lg font-bold tracking-[-0.015em]">Aprendizado</h3>
+</div>
+<p class="text-sm font-normal text-[#8a8360] dark:text-gray-400">
+Aprenda sobre personalidades históricas, pratos típicos, instrumentos musicais, festividades e a importância da herança africana na formação do Brasil.
+</p>
+</div>
+</div>
+
+<div class="p-6 rounded-xl bg-white dark:bg-[#2c2813] border border-[#e6e4db] dark:border-[#3a351d]">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-2xl">gamepad</span>
+<h3 class="text-lg font-bold tracking-[-0.015em]">Como Jogar</h3>
+</div>
+<ul class="space-y-3 list-disc list-inside text-sm text-[#8a8360] dark:text-gray-400">
+<li>Use o <span class="font-semibold">mouse</span> para mover as coisas pelo cenário.</li>
+</ul>
+</div>
+</main>
+
+<!-- Rodapé Padrão COM LOGO CORRIGIDA -->
+<footer class="mt-12 border-t border-solid border-[#e6e4db] dark:border-[#3a351d] py-8 px-4 text-center">
+<div class="flex flex-col items-center justify-center">
+<div class="flex items-center gap-3 mb-6">
+<!-- LOGO NO RODAPÉ - NÃO ACHATADA -->
+<a href="inicio.html" class="logo-footer flex items-center hover:opacity-90 transition-opacity">
+    <img src="logo.png" 
+         alt="Logo Cultura Afro-Brasileira" 
+         class="h-12 w-auto max-h-12" 
+         style="object-fit: contain; height: auto;">
+    <p class="text-base font-bold ml-3">Cultura Afro-Brasileira</p>
+</a>
+</div>
+
+<div class="flex flex-wrap justify-center gap-6 mt-4">
+<a class="text-[#8a8360] dark:text-gray-400 text-sm font-normal leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="index.html">Início</a>
+<a class="text-[#8a8360] dark:text-gray-400 text-sm font-normal leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="sobre_a_cultura.html">Sobre a Cultura</a>
+<a class="text-[#8a8360] dark:text-gray-400 text-sm font-normal leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="desenvolvimento_do_projeto_&_linha_do_tempo.html">Desenvolvimento</a>
+<a class="text-[#8a8360] dark:text-gray-400 text-sm font-normal leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="aprendizados.html">Aprendizados</a>
+<a class="text-[#8a8360] dark:text-gray-400 text-sm font-normal leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="jogo_em_scratch.html">Jogo</a>
+<a class="text-[#8a8360] dark:text-gray-400 text-sm font-normal leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="contato.html">Contato</a>
+<a class="text-[#8a8360] dark:text-gray-400 text-sm font-normal leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="créditos.html">Créditos</a>
+<a class="text-[#8a8360] dark:text-gray-400 text-sm font-normal leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="termos_e_privacidade.html">Termos</a>
+</div>
+<div class="flex flex-wrap justify-center gap-4 mt-4">
+<a href="#" class="text-[#8a8360] dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+<svg fill="currentColor" height="20" viewbox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M128 80a48 48 0 1 0 48 48 48.05 48.05 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32 32 32 0 0 1-32 32Zm48-136H80a56.06 56.06 0 0 0-56 56v96a56.06 56.06 0 0 0 56 56h96a56.06 56.06 0 0 0 56-56V80a56.06 56.06 0 0 0-56-56Zm40 152a40 40 0 0 1-40 40H80a40 40 0 0 1-40-40V80a40 40 0 0 1 40-40h96a40 40 0 0 1 40 40ZM192 76a12 12 0 1 1-12-12 12 12 0 0 1 12 12Z"></path>
+</svg>
+</a>
+<a href="#" class="text-[#8a8360] dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+<svg fill="currentColor" height="20" viewbox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M234.66 128a106.66 106.66 0 1 0-114.33 106.13V163H96v-35h24.33v-26.2c0-23.83 14.21-37.05 36.17-37.05a193.38 193.38 0 0 1 21.5.86V98h-12.27c-11.8 0-14.07 5.56-14.07 13.8v18.06h26.44l-3.44 35H148v71.13A106.68 106.68 0 0 0 234.66 128Z"></path>
+</svg>
+</a>
+<a href="#" class="text-[#8a8360] dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+<svg fill="currentColor" height="20" viewbox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="m234.33 73.13.06-.26a22.51 22.51 0 0 0-1.89-8.49 22.18 22.18 0 0 0-13.6-11.81C201.37 48 128 48 128 48s-73.37 0-90.87 4.57A22.18 22.18 0 0 0 23.53 64.38a22.51 22.51 0 0 0-1.89 8.49l-.06.26A280.49 280.49 0 0 0 21.33 104v48a280.49 280.49 0 0 0 .25 30.61l.06.26a22.51 22.51 0 0 0 1.89 8.49A22.18 22.18 0 0 0 37.13 203.17C54.63 207.74 128 207.74 128 207.74s73.37 0 90.87-4.57a22.18 22.18 0 0 0 13.6-11.81 22.51 22.51 0 0 0 1.89-8.49l.06-.26A280.49 280.49 0 0 0 234.67 152v-48a280.49 280.49 0 0 0-.34-30.87ZM101.33 155V96.59l45.45 29.21Z"></path>
+</svg>
+</a>
+</div>
+<p class="mt-4 text-sm text-[#8a8360] dark:text-gray-400">© 2025 Projeto Cultura Afro-Brasileira. Todos os direitos reservados.</p>
+</div>
+</footer>
+
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
